@@ -63,6 +63,11 @@ class AuthenticationRepository {
       throw LogInWithGoogleFailure();
     }
   }
+
+//login con correo y password
+
+//cerrar sesion
+
 }
 
 extension on firebase_auth.User {
