@@ -65,9 +65,25 @@ class AuthenticationRepository {
   }
 
 //login con correo y password
+  Future<void> logInWithEmailAndPassword(
+      {required String email, required String password}) async {
+    assert(email != null && password != null);
+    try {
+      await _firebaseauth.signInWithEmailAndPassword(
+          email: email, password: password);
+    } on Exception {
+      throw LogInWithEmailAndPasswordFailure();
+    }
+  }
 
 //cerrar sesion
-
+  Future<void> logOut() async {
+    try {
+      await Future.wait([_firebaseauth.signOut(), _googleSignIn.signOut()]);
+    } on Exception {
+      throw LogOutFailure();
+    }
+  }
 }
 
 extension on firebase_auth.User {
