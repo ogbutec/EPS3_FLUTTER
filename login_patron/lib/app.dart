@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:login_patron/repository/authentication_repository.dart';
+import 'package:login_patron/repository/autenticacion/authentication_repository.dart';
 import 'package:login_patron/repository/theme.dart';
 
 class Login extends StatelessWidget {
