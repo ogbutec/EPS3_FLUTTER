@@ -4,7 +4,7 @@ import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/foundation.dart';
 import 'package:bloc/bloc.dart';
 import 'SimpleBlocObserver.dart';
-import 'app.dart';
+import 'package:login_patron/app.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();

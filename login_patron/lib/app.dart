@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:login_patron/repository/authentication_repository.dart';
+import 'package:login_patron/repository/theme.dart';
 
 class Login extends StatelessWidget {
-  const Login({Key key, required authenticationRepository})
+  const Login({required Key key, required authenticationRepository})
       : assert(authenticationRepository != null),
         super(key: key);
 
@@ -33,7 +34,7 @@ class _AppViewState extends State<AppView> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      theme: ThemeData.light(),
+      theme: theme,
       navigatorKey: _navigatorKey,
       builder: (context, child) {
         return BlocListener(listener: (context, state) {});
