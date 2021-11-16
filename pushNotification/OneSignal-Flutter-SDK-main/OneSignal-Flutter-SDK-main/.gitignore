@@ -1,0 +1,17 @@
+.DS_Store
+.dart_tool/
+
+.packages
+.pub/
+pubspec.lock
+
+build/
+android/.idea
+.flutter-plugins-dependencies
+flutter_export_environment.sh
+
+# IntelliJ related
+*.iml
+*.ipr
+*.iws
+.idea/
