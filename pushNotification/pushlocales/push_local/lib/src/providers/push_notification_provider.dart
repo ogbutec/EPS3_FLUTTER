@@ -6,9 +6,7 @@ class PushNotificationProvider {
   initNotifications() {
     firebaseMessaging.requestPermission();
     firebaseMessaging.getToken().then((token) {
-      // ignore: avoid_print
-      print('---------- FCM token -----------');
-      // ignore: avoid_print
+      print('------------ FCM token -----------');
       print(token);
     });
   }
